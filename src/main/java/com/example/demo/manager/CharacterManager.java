@@ -13,14 +13,15 @@ public class CharacterManager {
     CharacterMapper characterMapper;
     CharacterRepository characterRepo;
 
-    @Autowired
-    CharacterManager(CharacterMapper characterMapper, CharacterRepository characterRepo) {
+    public CharacterManager(CharacterMapper characterMapper, CharacterRepository characterRepo) {
         this.characterMapper = characterMapper;
         this.characterRepo = characterRepo;
     }
 
     public Character createCharacter(Character character) {
         CharacterEntity entity = characterMapper.modelToEntity(character);
+
+        character.getCharisma().getValue();
         entity = characterRepo.save(entity);
         return characterMapper.entityToModel(entity);
     }
