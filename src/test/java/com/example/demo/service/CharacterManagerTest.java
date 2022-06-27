@@ -1,4 +1,4 @@
-package com.example.demo.manager;
+package com.example.demo.service;
 
 
 import org.junit.jupiter.api.extension.ExtendWith;

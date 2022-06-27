@@ -5,8 +5,6 @@ import com.example.demo.model.Character;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.persistence.Table;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CharacterMapperTest {
