@@ -5,7 +5,9 @@ import com.example.demo.model.Character;
 import lombok.val;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Component
 public class CharacterMapper {
@@ -24,6 +26,9 @@ public class CharacterMapper {
         character.setName(name);
         character.setId(id);
         return character;
+    }
+    public List<Character> entityListToModelList(List<CharacterEntity> characterEntityList) {
+        return characterEntityList.stream().map(characterEntity -> entityToModel(characterEntity)).collect(Collectors.toList());
     }
 
 }

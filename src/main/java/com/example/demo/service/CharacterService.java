@@ -32,4 +32,8 @@ public class CharacterService {
         val entity = optional.orElse(null);
         return characterMapper.entityToModel(entity);
     }
+    public Iterable<Character> getAllCharacters() {
+        val characterEntityList = characterRepo.findAll();
+        return characterMapper.entityListToModelList(characterEntityList);
+    }
 }

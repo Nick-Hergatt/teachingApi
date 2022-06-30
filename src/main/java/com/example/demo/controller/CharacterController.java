@@ -29,6 +29,10 @@ public class CharacterController {
         return characterService.getCharacter(id);
     }
 
+    @GetMapping(path = "getAllCharacters")
+    public Iterable<Character> getAllCharacters(){
+        return characterService.getAllCharacters();
+    }
 
 //    @PatchMapping(path = "character/{id}")
 //    public Character editCharacter(@RequestBody Character character, @PathVariable("id") Integer id) {
